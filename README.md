@@ -21,7 +21,6 @@ The script must have execute permissions to be run. After you have cloned the re
 chmod +x manage_mariadb.sh
 ```
 
-Running the Script
 You can run the script as root:
 ```
 sudo ./manage_mariadb.sh
