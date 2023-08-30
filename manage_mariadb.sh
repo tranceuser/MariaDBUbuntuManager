@@ -122,7 +122,7 @@ while true; do
 		4)
 			read -p "Enter the name of the database to export: " db_name
 			read -p "Enter the path to save the SQL file (e.g., /home/ubuntu/backup.sql): " export_file
-			mysqldump -u root -p"$root_password" "$db_name" > "$export_file"
+			mysqldump -u root -p"$root_password" --routines --triggers --events --add-drop-table --complete-insert "$db_name" > "$export_file"
 			if [ $? -eq 0 ]; then
 				echo "Export completed successfully"
 			else
